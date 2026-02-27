@@ -31,9 +31,16 @@ sudo python3 /usr/local/bin/memory-cleaner.py --config /etc/memory-cleaner/confi
 
 ### Устанавливаем сервис
 ```bash
+# 1. Копирует файл сервиса в системную директорию systemd
 sudo cp memory-cleaner.service /etc/systemd/system/
+
+# 2. Перезагружает конфигурацию systemd
 sudo systemctl daemon-reload
+
+# 3. Включает автозапуск сервиса при старте системы
 sudo systemctl enable memory-cleaner
+
+# 4. Запускает сервис сейчас
 sudo systemctl start memory-cleaner
 ```
 
@@ -67,6 +74,24 @@ sudo kill -SIGUSR1 <PID>
 ### Или одной командой
 ```bash
 sudo pkill -SIGUSR1 -f memory-cleaner.py
+```
+# ------------------------------------------------
+## Команды, что могут пригодиться
+```bash
+# Проверить статус
+sudo systemctl status memory-cleaner
+
+# Остановить
+sudo systemctl stop memory-cleaner
+
+# Перезапустить
+sudo systemctl restart memory-cleaner
+
+# Посмотреть логи
+sudo journalctl -u memory-cleaner -f
+
+# Отключить автозапуск
+sudo systemctl disable memory-cleaner
 ```
 
 # _____________________________
