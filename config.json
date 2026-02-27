@@ -1,0 +1,48 @@
+{
+    "mount_point": "/",
+    "warning_threshold_gb": 4,
+    "cleanup_threshold_gb": 2,
+    "check_interval_seconds": 60,
+    "log_file": "/var/log/memory-cleaner/cleaner.log",
+    "log_max_size_mb": 10,
+    "log_backup_count": 5,
+    "notification": {
+        "enabled": true,
+        "display": ":0",
+        "user": "robotuser",
+        "timeout_ms": 5000
+    },
+    "cleanup_rules": [
+        {
+            "path": "/tmp",
+            "pattern": "*",
+            "max_age_days": 1,
+            "recursive": true
+        },
+        {
+            "path": "/var/log",
+            "pattern": "*.log",
+            "max_age_days": 7,
+            "recursive": true,
+            "exclude": ["current", "auth.log", "syslog", "kern.log"]
+        },
+        {
+            "path": "/var/cache/apt/archives",
+            "pattern": "*.deb",
+            "max_age_days": 30,
+            "recursive": false
+        },
+        {
+            "path": "/home/robotuser/.cache",
+            "pattern": "*",
+            "max_age_days": 3,
+            "recursive": true
+        },
+        {
+            "path": "/var/lib/docker/containers",
+            "pattern": "*-json.log",
+            "max_age_days": 2,
+            "recursive": true
+        }
+    ]
+}
