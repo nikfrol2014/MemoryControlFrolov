@@ -9,14 +9,14 @@
     "notification": {
         "enabled": true,
         "display": ":0",
-        "user": "robotuser",
+        "user": "user",
         "timeout_ms": 5000
     },
     "cleanup_rules": [
         {
             "path": "/tmp",
             "pattern": "*",
-            "max_age_days": 1,
+            "max_age_days": 0,
             "recursive": true
         },
         {
@@ -33,7 +33,7 @@
             "recursive": false
         },
         {
-            "path": "/home/robotuser/.cache",
+            "path": "/home/user/.cache",
             "pattern": "*",
             "max_age_days": 3,
             "recursive": true

@@ -29,7 +29,7 @@ DEFAULT_CONFIG = {
     "notification": {
         "enabled": True,
         "display": ":0",
-        "user": "robotuser",
+        "user": "user",
         "timeout_ms": 5000
     },
     "cleanup_rules": [
@@ -255,7 +255,7 @@ class MemoryCleaner:
     def perform_cleanup(self) -> float:
         """
         Выполнение очистки по всем правилам
-        Возвращает освобождено гигабайт
+        Возвращает: освобождено гигабайт
         """
         logging.info("Starting cleanup process...")
         total_removed = 0
