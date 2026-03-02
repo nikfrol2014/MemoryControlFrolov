@@ -21,33 +21,29 @@
 ```
 # ______________________________
 # Тестовая версия Memory Cleaner
-### Создайте файл ~/memory_cleaner_test.py:
-```bash
-sudo touch ~/memory_cleaner_test.py
-```
 
-### Выдайте права на исполнение
+### Выдайте права на исполнение (если их нет)
 ```bash
-chmod +x ~/memory_cleaner_test.py
+chmod +x memory_cleaner_test.py
 ```
 
 ## Быстрые команды для тестирования:
 ```bash
 # Создать тестовые файлы и запустить интерактивный режим
-~/memory_cleaner_test.py --create-files --interactive
+sudo python3 memory_cleaner_test.py --create-files --interactive
 
 # Запустить одну проверку
-~/memory_cleaner_test.py --once
+sudo python3 memory_cleaner_test.py --once
 
 # Запустить автоматический режим с подробным выводом
-~/memory_cleaner_test.py --verbose
+sudo python3 memory_cleaner_test.py --verbose
 
 # Использовать свой конфиг
-~/memory_cleaner_test.py --config ~/my_test_config.json
+sudo python3 memory_cleaner_test.py --config ~/my_test_config.json
 
 # РЕАЛЬНОЕ УДАЛЕНИЕ (будьте осторожны!)
-~/memory_cleaner_test.py --no-dry-run --once
+sudo python3 memory_cleaner_test.py --no-dry-run --once
 
 # Показать справку
-~/memory_cleaner_test.py --help
+sudo python3 memory_cleaner_test.py --help
 ```
