@@ -1,7 +1,6 @@
-# /etc/systemd/system/memory-cleaner.service - создать файл тут
 [Unit]
-Description=Memory Cleaner Daemon for AMR
-Documentation=https://github.com/your-repo/memory-cleaner
+Description=Memory Cleaner Daemon for AMR or PC
+Documentation=https://github.com/nikfrol2014/MemoryControlFrolov
 After=network.target multi-user.target
 
 [Service]

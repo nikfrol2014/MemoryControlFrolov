@@ -3,7 +3,6 @@
 Memory Cleaner Daemon for AMR
 Monitors disk space and performs cleanup when thresholds are reached.
 """
-# /usr/local/bin/memory-cleaner.py - создать этот файл тут
 
 import os
 import sys
